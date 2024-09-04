@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Clinic</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .navbar {
+            background-color: #092330;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #a4c9d0 !important;
+        }
+
+        .hero {
+            background: url('back.jpg') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+        }
+
+        .section {
+            padding: 60px 15px;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #003366;
+            /* Dark blue color */
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .section img {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .about-section {
+            background-color: #f0f8ff;
+            /* Light blue background */
+        }
+
+        .services-section {
+            background: linear-gradient(to right, #ffffff, #e0f7fa);
+            /* Light gradient */
+        }
+
+        .contact-section {
+            background-color: #e8f4f8;
+            /* Pale blue background */
+        }
+
+        .footer {
+            background-color: #003366;
+            color: #ffffff;
+            padding: 20px 0;
+        }
+
+        .footer a {
+            color: #a4c9d0;
+        }
+
+        .footer a:hover {
+            text-decoration: none;
+        }
+
+        .navbar-brand img {
+            height: 8vw;
+            /* Makes the logo responsive based on viewport width */
+            max-height: 60px;
+            /* Ensures the logo doesn't get too large on larger screens */
+            width: 7vw;
+            /* Maintains the aspect ratio of the logo */
+        }
+
+        .content-section {
+            padding: 50px 15px;
+            background-color: #f5fafd;
+            color: #003366;
+        }
+
+        .content-section h2 {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .content-section p {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            text-align: justify;
+            /* Justifies the text */
+        }
+
+        .modal-content {
+            border-radius: 10px;
+        }
+
+        .modal-header {
+            background-color: #003366;
+            /* Dark blue background */
+            color: white;
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
+        }
+
+        .form-control {
+            border-radius: 5px;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">
+            <img src="logo.jpeg" alt="Logo"> Vedant Dental and Aesthetic Center
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#appointmentModal">
+                        Book Appointment
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div>
+            <strong>
+                <h1>Welcome to Vedant Dental and Aesthetic Center</h1>
+                <p>Where Your Smile Meets Art and Science</p>
+                <p>Book your appointment today and take the first step towards a brighter, healthier smile.</p>
+            </strong>
+        </div>
+    </header>
+    <section class="content-section text-center">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <p><strong>Comprehensive Care:</strong> From routine check-ups to advanced cosmetic procedures, we offer a
+                full range of services to keep your smile healthy and beautiful.</p>
+            <p><strong>State-of-the-Art Technology:</strong> We utilize the latest technology to ensure precise and
+                comfortable treatments.</p>
+            <p><strong>Personalized Treatment Plans:</strong> Every smile is unique, and so is our approach to your
+                dental care. We design personalized plans that fit your lifestyle and goals.</p>
+            <p><strong>Aesthetic Excellence:</strong> Our aesthetic treatments are designed to enhance your natural
+                beauty, giving you the confidence to smile more.</p>
+        </div>
+    </section>
+
+
+    <!-- Content Sections -->
+    <div id="about" class="section container py-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="3.jpeg" alt="About Us Image" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6">
+                <h2>About Us</h2>
+                <p>At Vedant Dental and Aesthetic Center, we are committed to providing exceptional dental and aesthetic
+                    care with a focus on your comfort and well-being. Established with the mission to deliver the
+                    highest quality care, our team of skilled professionals combines expertise with the latest
+                    technology to offer a comprehensive range of dental and cosmetic treatments.</p>
+                <p>Our mission is to enhance your smile and confidence through personalized care and advanced treatment
+                    options. We strive to make every visit a pleasant experience, and we are dedicated to addressing
+                    your unique needs with a compassionate approach.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section container py-5">
+        <div class="row">
+            <div class="col-md-6 order-md-2">
+                <img src="5.jpeg" alt="Our Services Image" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6 order-md-1">
+                <h2>Our Services</h2>
+                <p>Comprehensive Care: From routine check-ups to advanced cosmetic procedures, we offer a full range of
+                    services to keep your smile healthy and beautiful.</p>
+                <p>State-of-the-Art Technology: We utilize the latest technology to ensure precise and comfortable
+                    treatments.</p>
+                <p>Personalized Treatment Plans: Every smile is unique, and so is our approach to your dental care. We
+                    design personalized plans that fit your lifestyle and goals.</p>
+                <p>Aesthetic Excellence: Our aesthetic treatments are designed to enhance your natural beauty, giving
+                    you the confidence to smile more.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section container py-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="4.jpeg" alt="Contact Us Image" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6">
+                <h2>Contact Us</h2>
+                <p>If you have any questions or would like to schedule an appointment, please reach out to us. We look
+                    forward to assisting you and making your visit as comfortable as possible.</p>
+                <p>Email: <a href="mailto:info@vedantdental.com">info@vedantdental.com</a></p>
+                <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                <p>Address: 123 Dental Lane, Smile City, ST 12345</p>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="appointmentModal" tabindex="-1" role="dialog" aria-labelledby="appointmentModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="appointmentModalLabel">Book Your Appointment</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="appointmentForm">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" placeholder="Enter your full name"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email address"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Preferred Date</label>
+                            <input type="date" class="form-control" id="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Preferred Time</label>
+                            <input type="time" class="form-control" id="time" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reason">Reason for Visit</label>
+                            <textarea class="form-control" id="reason" rows="3"
+                                placeholder="Briefly describe the reason for your visit" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">Additional Notes</label>
+                            <textarea class="form-control" id="notes" rows="3"
+                                placeholder="Any additional information or requests"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Appointment Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <p>&copy; 2024 Dental Clinic. All rights reserved.</p>
+            <p>Contact us at <a href="mailto:info@dentalclinic.com">info@dentalclinic.com</a></p>
+            <div class="map">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.4410352933967!2d-122.42073648468163!3d37.77902697975986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809f0d0a9a7b%3A0x4b5f1231a1b69ae2!2sUnion%20Square%2C%20San%20Francisco%2C%20CA%2094110!5e0!3m2!1sen!2sus!4v1637747065663!5m2!1sen!2sus"
+                        allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
